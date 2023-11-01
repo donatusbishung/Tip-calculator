@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    
+    <!-- Css link here -->
+    <link rel="stylesheet" href="CSS/tip.css">
+</head>
+<body>
+    <div class="container">
+        <div><h3 class="header-h3">Bill total</h3></div>
+        <div class="bill-section inputContainer">
+            <span>$</span>
+            <input onkeyup="calculateBill()" id="billTotalInput" type="text" placeholder="0.00">
+        </div>
+        <h3 class="header-h3">Tip</h3>
+        <div class="inputContainer">
+            <span>%</span>
+            <input onkeyup="calculateBill()" id="tipInput" type="text" placeholder="10">
+        </div>
+        <div class="calcution-section">
+            <div class="num-people" style="display: flex; flex-direction: column; gap: 1rem;">
+                <h3>People</h3>
+                <div style="display: flex; gap: 20px;">
+                <button class="Btn" id="addBtn">+</button>
+                <span style="color: black;" id="numberOfPeople">1</span>
+                <button class="Btn" id="subBtn">-</button>
+                </div>
+            </div>
+            <div class="per-person">
+                <h3>Total per Person</h3>
+                <div style="display: flex;">
+                    <p style="color: black;" class="total">$</p>
+                    <p id="totalAmount" class="total">0.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Js/tip.js"></script>
+</body>
+</html>
